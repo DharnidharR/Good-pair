@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int i,integer;
+    int count=0;
+    scanf("%d",&i);
+    int a[i];
+    for(int j=0;j<i;j++)
+    {
+        scanf("%d",&a[j]);
+    }
+    scanf("%d",&integer);
+    for(int k=0;k<i;k++)    
+    {
+        for(int l=k+1;l<i;l++)
+        {
+            if(a[k]!=a[l]&&a[k]+a[l]==integer)
+            {
+                count+=1;
+            }
+        }
+    }
+    printf("%d",count);
+    return 0;
+}
